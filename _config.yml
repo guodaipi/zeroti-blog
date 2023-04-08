@@ -103,6 +103,6 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: git@github.com:guodaipi/hexo.git
+  repo: git@github.com:guodaipi/zeroti-blog.git
   branch: public
 
