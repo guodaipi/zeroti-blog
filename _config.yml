@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://hexo-rose-one.vercel.app/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -101,8 +101,18 @@ theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+
+#部署到gitee主分支或者github-public分支
 deploy:
   type: 'git'
+  # repo: git@gitee.com:guodaipi/guodaipi.git
   repo: git@github.com:guodaipi/zeroti-blog.git
   branch: public
 
+
+# hexo-admin authentification
+admin:
+  username: username
+  password_hash: $2a$10$L.XAIqIWgTc5S1zpvV3MEu7/rH34p4Is/nq824smv8EZ3lIPCp1su
+  secret: my super secret phrase
+  # deployCommand: ./hexo-deploy.sh
