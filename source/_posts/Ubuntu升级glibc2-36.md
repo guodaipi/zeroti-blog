@@ -1,6 +1,6 @@
 ---
 title: Ubuntu升级glibc2.36
-tags: Linux遇到的问题
+tags: Linux
 abbrlink: 30270
 date: 2023-03-23 19:54:45
 ---
@@ -16,21 +16,25 @@ date: 2023-03-23 19:54:45
   Written by Roland McGrath and Ulrich Drepper.
   ```
 
-2. 下载指定版本的gblic：https://ftp.gnu.org/gnu/glibc/
+2. 下载指定版本的gblic：https://mirrors.aliyun.com/gnu/glibc/glibc-2.36.tar.gz
 
 3. 解压到随意路径后进行编译
 
-	```shell
-	cd glibc-2.36	#进入解压的路径
-	sudo mkdir build && cd build	#新建build文件夹并进入
-	../configure --prefix=/usr/local --disable-sanity-checks  #需要参数
-	sudo make -j4		#开始编译
-	sudo make install	#安装
-	```
+  ```shell
+  wget https://mirrors.aliyun.com/gnu/glibc/glibc-2.36.tar.gz
+  tar -zxvf glibc-2.36.tar.gz		#解压文件夹
+  cd glibc-2.36	#进入解压的路径
+  sudo mkdir build && cd build	#新建build文件夹并进入
+  sudo ../configure --prefix=/usr/local --disable-sanity-checks  #需要参数
+  sudo make -j8		#开始编译
+  sudo make install	#安装
+  ```
 
 4. 如果正常安装就完成了
 
+​	删除旧的so.6
 
+​	创建新的软连接
 
 
 
